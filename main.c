@@ -6,14 +6,13 @@
 #include <sys/errno.h>
 #include "memcached.h"
 
-/// 基于memcached 1.4.28
 void memcachedTest()
 {
     printf("Memcached Test starting!\n");
     memcached_init();
     printf("Memcached Test started!\n");
 
-    // 插入删除测试
+    // insert and delete
     char *value = "Value start... value End.";
     item *it = NULL;
     it = item_data_get("hello", 5);
